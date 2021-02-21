@@ -201,7 +201,7 @@ static void Thread_yield(JNIEnv*, jobject) {
   sched_yield();
 }
 
-static const JNINativeMethod gMethods[] = {
+static JNINativeMethod gMethods[] = {
   FAST_NATIVE_METHOD(Thread, currentThread, "()Ljava/lang/Thread;"),
   FAST_NATIVE_METHOD(Thread, interrupted, "()Z"),
   FAST_NATIVE_METHOD(Thread, isInterrupted, "()Z"),

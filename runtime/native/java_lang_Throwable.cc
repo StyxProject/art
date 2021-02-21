@@ -38,7 +38,7 @@ static jobjectArray Throwable_nativeGetStackTrace(JNIEnv* env, jclass, jobject j
   return Thread::InternalStackTraceToStackTraceElementArray(soa, javaStackState);
 }
 
-static const JNINativeMethod gMethods[] = {
+static JNINativeMethod gMethods[] = {
   FAST_NATIVE_METHOD(Throwable, nativeFillInStackTrace, "()Ljava/lang/Object;"),
   FAST_NATIVE_METHOD(Throwable, nativeGetStackTrace, "(Ljava/lang/Object;)[Ljava/lang/StackTraceElement;"),
 };
